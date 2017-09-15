@@ -2,6 +2,7 @@ import test from 'ava';
 
 import binarySearch from './sortAndSearch/binarySearch';
 import bubbleSort from './sortAndSearch/bubbleSort';
+import mergeSort from './sortAndSearch/mergeSort';
 
 test('binary search: no elements', (t) => {
   t.is(binarySearch([], 10), -1);
@@ -26,4 +27,9 @@ test('binary search: exists', (t) => {
 test('bubble sort: correct', (t) => {
   t.deepEqual(bubbleSort([33, 103, 3, 726, 200, 984, 198, 764, 9]),
     [3, 9, 33, 103, 198, 200, 726, 764, 984]);
+});
+
+// merge sort
+test('merge sort', (t) => {
+  t.deepEqual(mergeSort([8, 3, 1, 7, 0, 10, 2]), [0, 1, 2, 3, 7, 8, 10]);
 });
